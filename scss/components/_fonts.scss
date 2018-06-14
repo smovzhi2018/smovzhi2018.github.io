@@ -1,0 +1,14 @@
+$font-neucha:     'Neucha', cursive;
+$font-ubuntu:     'Ubuntu Condensed', sans-serif;
+
+.font-neucha {
+  font-family: $font-neucha;
+}
+
+.font-ubuntu {
+  font-family: $font-ubuntu;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-neucha;
+}

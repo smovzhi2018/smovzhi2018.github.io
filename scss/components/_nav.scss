@@ -1,0 +1,32 @@
+.nav {
+  border-bottom: 1px solid #ececec;
+  background-color: $white;
+}
+
+.logo {
+  font-family: $font-neucha;
+  font-size: 40px;
+  color: $primary;
+}
+
+.nav-menu {
+  display: flex;
+
+  > li {
+
+    > .nav-item {
+      display: block;
+      padding: 35px 17px;
+      line-height: 20px;
+      font-size: 20px;
+      text-transform: uppercase;
+      transition: .2s;
+      color: $body-text-color;
+
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
