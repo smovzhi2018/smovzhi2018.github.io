@@ -1,16 +1,41 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    entry: './scss/main.scss',
+    entry: {
+        js: [
+            path.resolve(__dirname, 'node_modules/jquery/dist/jquery.js'),
+            path.resolve(__dirname, 'node_modules/wow.js/dist/wow.js'),
+            path.resolve(__dirname, 'node_modules/stellar.js/jquery.stellar.js'),
+            path.resolve(__dirname, 'node_modules/scrolltofixed/jquery-scrolltofixed.js'),
+            path.resolve(__dirname, 'js/flat-surface-shader.js'),
+            path.resolve(__dirname, 'js/main.js')
+        ],
+        css: './scss/main.scss'
+    },
     output: {
         path: path.join(__dirname, './dist/'),
-        filename: '[name].css'
+        filename: 'main.[name]'
     },
     plugins: [
+        new WebpackCleanupPlugin(),
+        new HtmlWebpackPlugin({
+            filename: __dirname + '/index.html',
+            template: __dirname + '/main.html'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
+        new UglifyJsPlugin(),
         new ExtractTextPlugin({
-            filename: '[name].css'
+            filename: 'main.css'
         })
     ],
     resolve: {
@@ -18,6 +43,15 @@ module.exports = {
     },
     module: {
         rules: [{
+            test: /\.exec\.js$/,
+            use: ['script-loader']
+        }, {
+            test: require.resolve('wow.js/dist/wow.js'),
+            use: [{
+                loader: 'expose-loader',
+                options: 'WOW'
+            }]
+        }, {
             test: /\.scss$/,
             use: ExtractTextPlugin.extract({
                 use: [{
@@ -31,7 +65,6 @@ module.exports = {
                     options: {
                         plugins: function () {
                             return [
-                                require('autoprefixer'),
                                 require('postcss-short'),
                                 require('postcss-cssnext')
                             ]

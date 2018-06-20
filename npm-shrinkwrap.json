@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": {
+      "version": "3.3.1",
+      "from": "jquery@3.3.1",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.3.1.tgz"
+    },
+    "scrolltofixed": {
+      "version": "1.0.6",
+      "from": "scrolltofixed@latest",
+      "resolved": "https://registry.npmjs.org/scrolltofixed/-/scrolltofixed-1.0.6.tgz"
+    },
+    "stellar.js": {
+      "version": "0.6.5",
+      "from": "stellar.js@latest",
+      "resolved": "https://registry.npmjs.org/stellar.js/-/stellar.js-0.6.5.tgz"
+    },
+    "wow.js": {
+      "version": "1.2.2",
+      "from": "wow.js@latest",
+      "resolved": "https://registry.npmjs.org/wow.js/-/wow.js-1.2.2.tgz"
+    }
+  }
+}
