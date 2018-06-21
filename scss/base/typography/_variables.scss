@@ -2,14 +2,14 @@
 
 $header-line-height:        1.1 !default;
 $header-weight:             normal !default;
-$header-text-color:         $default-text-color !default;
+$header-text-color:         #3e3e3e !default;
 
 $header-font-sizes: (
   xs: (
-    h1: 40,
-    h2: 30,
-    h3: 24,
-    h4: 18,
+    h1: 60,
+    h2: 40,
+    h3: 31,
+    h4: 25,
     h5: 17,
     h6: 16,
   ),
