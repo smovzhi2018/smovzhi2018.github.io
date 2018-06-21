@@ -1,0 +1,44 @@
+.countdown {
+  padding: 120px 0;
+  background-color: $dark-gray;
+}
+
+.count-down-clock {
+  margin-top: 10px;
+  color: $primary;
+}
+
+.count-down-clock .clock {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+
+  > div {
+    flex: 0 0 calc(100% - 10px);
+    margin: 0 5px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+
+    @include from-screen-size(md) {
+      flex: 0 0 calc(25% - 10px);
+      max-width: calc(25% - 10px);
+    }
+  }
+
+  .box {
+
+    > div {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1em;
+    }
+
+    span {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+}
