@@ -13,6 +13,7 @@ module.exports = {
             path.resolve(__dirname, 'node_modules/wow.js/dist/wow.js'),
             path.resolve(__dirname, 'node_modules/stellar.js/jquery.stellar.js'),
             path.resolve(__dirname, 'node_modules/scrolltofixed/jquery-scrolltofixed.js'),
+            path.resolve(__dirname, 'node_modules/jquery-countdown/dist/jquery.countdown.js'),
             path.resolve(__dirname, 'js/flat-surface-shader.js'),
             path.resolve(__dirname, 'js/main.js')
         ],

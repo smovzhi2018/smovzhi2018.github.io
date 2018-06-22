@@ -19,7 +19,7 @@ $body-font-family:        $default-font-family !default;
 $body-font-size:          16 !default;
 $body-line-height:        1.8 !default;
 $body-text-color:         $default-text-color !default;
-$body-background-color:   #f7f8fb !default;
+$body-background-color:   #f9f9f9 !default;
 $body-font-weight:        nolmal !default;
 
 /* ===== Colors ===== */
@@ -49,7 +49,7 @@ $warning:                 $yellow !default;
 
 /* Gray Colors */
 
-$light-gray:              #eceeef !default;
+$light-gray:              rgba(red($green), green($green), blue($green), .05) !default;
 $medium-gray:             #dfe3e9 !default;
 $dark-gray:               #BDB9BD !default;
 
