@@ -29,7 +29,7 @@ module.exports = env => {
         plugins: [
             new WebpackCleanupPlugin(),
             new HtmlWebpackPlugin({
-                filename: __dirname + isProd ? './index.html' : './dist/index.html',
+                filename: __dirname + (isProd ? '/index.html' : './dist/index.html'),
                 template: __dirname + '/main.html'
             }),
             new webpack.ProvidePlugin({
