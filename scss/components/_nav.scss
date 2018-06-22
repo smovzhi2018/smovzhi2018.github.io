@@ -13,7 +13,8 @@
 .logo-img {
   size: 45px;
   max-width: 45px;
-  margin-right: 5px;
+  background: url("../img/logo.svg") no-repeat center;
+  background-size: contain;
 }
 
 .nav-menu {

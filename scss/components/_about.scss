@@ -1,8 +1,25 @@
+.about-container {
+  @include from-screen-size(lg) {
+    padding: 0;
+    max-width: 1200px;
+    background-color: $light-gray;
+  }
+}
+
 .photo {
   width: 100%;
   height: 500px;
-  object-fit: cover;
   display: block;
+}
+
+.the-groom {
+  background: url("../img/the-groom.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.the-bride {
+  background: url("../img/the-bride.jpg") no-repeat center top;
+  background-size: cover;
 }
 
 .about-text {

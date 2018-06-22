@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack",
+    "build:dev": "webpack --env.NODE_ENV=dev",
+    "build:prod": "webpack --env.NODE_ENV=prod",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --port 7070 --host 0.0.0.0 --config webpack.config.js --hot --watch --debug --color --devtool eval-source-map --output-pathinfo --inline --progress --content-base ./ --history-api-fallback"
+    "start": "webpack-dev-server --port 7070 --host 0.0.0.0 --config webpack.config.js --env.NODE_ENV=dev --hot --watch --debug --color --devtool eval-source-map --output-pathinfo --inline --progress --content-base ./dist --history-api-fallback"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",

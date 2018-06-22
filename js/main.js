@@ -18,7 +18,7 @@ $(document).ready(function() {
         },
 
         countdown: function () {
-            $('#clock').countdown('2018/09/15', function(event) {
+            $('#clock').countdown('2018/09/15 12:20:00', function(event) {
                 var $this = $(this).html(event.strftime(''
                     + '<div class="box"><div>%D</div> <span>Days</span> </div>'
                     + '<div class="box"><div>%H</div> <span>Hours</span> </div>'
