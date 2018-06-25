@@ -1,8 +1,15 @@
 .title {
+  position: relative;
   display: inline-block;
-  padding: 5px 40px;
-  color: #848383;
-  border-top: 2px solid rgba(red($primary), green($primary), blue($primary), 0.2);
-  border-bottom: 2px solid rgba(red($primary), green($primary), blue($primary), 0.2);
-  background-color: rgba(red($primary), green($primary), blue($primary), 0.1);
+  padding-bottom: 20px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 50px;
+    margin-left: -25px;
+    border-bottom: 2px solid $primary;
+  }
 }

@@ -28,7 +28,6 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
     "jquery-countdown": "^2.2.0",
     "scrolltofixed": "^1.0.6",
     "stellar.js": "^0.6.5",

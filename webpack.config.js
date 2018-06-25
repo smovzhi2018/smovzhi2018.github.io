@@ -12,7 +12,6 @@ module.exports = env => {
     return {
         entry: {
             js: [
-                path.resolve(__dirname, 'node_modules/jquery/dist/jquery.js'),
                 path.resolve(__dirname, 'node_modules/wow.js/dist/wow.js'),
                 path.resolve(__dirname, 'node_modules/stellar.js/jquery.stellar.js'),
                 path.resolve(__dirname, 'node_modules/scrolltofixed/jquery-scrolltofixed.js'),
@@ -29,7 +28,7 @@ module.exports = env => {
         plugins: [
             new WebpackCleanupPlugin(),
             new HtmlWebpackPlugin({
-                filename: __dirname + (isProd ? '/index.html' : './dist/index.html'),
+                filename: __dirname + (isProd ? '/index.html' : '/dist/index.html'),
                 template: __dirname + '/main.html'
             }),
             new webpack.ProvidePlugin({

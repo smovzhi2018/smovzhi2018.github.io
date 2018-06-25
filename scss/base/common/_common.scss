@@ -23,6 +23,7 @@ body {
   color: $body-text-color;
   font-weight: $body-font-weight;
   background-color: $body-background-color;
+  scroll-behavior: smooth;
 }
 
 ul, ol {

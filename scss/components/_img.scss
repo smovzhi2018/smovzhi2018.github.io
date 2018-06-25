@@ -1,0 +1,44 @@
+.img-hover {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+
+    &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    > img {
+      transform: scale(1.1) rotate(3deg);
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute 0;
+    z-index: 1;
+    background-color: rgba(red($primary), green($primary), blue($primary), .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    size: 30px;
+    background: url("../img/picture.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  > img {
+    display: block;
+    transition: .35s;
+  }
+}

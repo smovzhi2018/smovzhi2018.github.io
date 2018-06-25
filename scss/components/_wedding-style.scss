@@ -1,0 +1,48 @@
+.wedding-style-images-grid {
+  margin-top: 50px;
+}
+
+.wedding-style-images-grid-row {
+  display: flex;
+
+  .wedding-style-images-grid-column {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .img-hover {
+    cursor: pointer;
+  }
+
+  .big-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+
+    > img {
+      height: 600px;
+    }
+  }
+
+  .medium-img {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    > img {
+      height: 300px;
+    }
+  }
+
+  .small-img {
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+
+    > img {
+      height: 300px;
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
