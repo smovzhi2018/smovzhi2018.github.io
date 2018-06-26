@@ -4,7 +4,7 @@
   cursor: default;
   overflow: hidden;
 
-  &:hover {
+  &:hover, .contractors-card:hover & {
 
     &:before, &[data-fancybox]:after {
       opacity: 1;
