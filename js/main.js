@@ -30,10 +30,14 @@ $(document).ready(function() {
 
     var Togglers = {
 
-        header: function () {
-            $('.toogle-nav').on('click', function() {
-                $('.responsive-menu, .navbar').toggleClass('open');
-            })
+        nav: function () {
+            $('.nav-button').on('click', function() {
+                $('.nav').toggleClass('active');
+            });
+
+            $('.nav-overlay, .nav-menu').on('click', function() {
+                $('.nav').removeClass('active');
+            });
         }
     };
 
@@ -113,7 +117,7 @@ $(document).ready(function() {
     Initialize.parallax();
     Initialize.countdown();
 
-    Togglers.header();
+    Togglers.nav();
 
     Navbar.init();
     Navbar.click();

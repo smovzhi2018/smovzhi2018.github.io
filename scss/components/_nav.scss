@@ -1,6 +1,59 @@
 .nav {
+  position: relative;
   border-bottom: 1px solid #ececec;
   background-color: $white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  transition: .2s;
+
+  &.scroll-to-fixed-fixed {
+    height: 60px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+  }
+
+  &.active {
+    box-shadow: none;
+  }
+
+  @include from-screen-size(lg) {
+    height: 100px;
+    box-shadow: none;
+  }
+
+  .container {
+    flex-grow: 1;
+  }
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, .3);
+  transition: .35s;
+  opacity: 0;
+  visibility: hidden;
+
+  .nav.active & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nav-button {
+  display: block;
+  background-color: transparent;
+  font-size: 25px;
+  line-height: 1;
+  height: 27px;
+
+  @include from-screen-size(lg) {
+    display: none;
+  }
 }
 
 .logo {
@@ -8,6 +61,15 @@
   font-size: 40px;
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include from-screen-size(lg) {
+    position: static;
+    transform: none;
+  }
 }
 
 .logo-img {
@@ -18,18 +80,45 @@
 }
 
 .nav-menu {
-  display: flex;
+  position: fixed;
+  z-index: 100;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  min-width: 260px;
+  padding-top: 20px;
+  background-color: $white;
+  transform: translateX(-100%);
+  transition: .35s;
+
+  .nav.active & {
+    transform: translateX(0);
+  }
+
+  @include from-screen-size(lg) {
+    position: static;
+    display: flex;
+    padding-top: 0;
+    transform: translateX(0);
+    background-color: transparent;
+  }
 
   > li {
 
     > .nav-item {
       display: block;
-      padding: 35px 17px;
+      padding: 20px 35px;
       line-height: 20px;
       font-size: 20px;
       text-transform: uppercase;
       transition: .2s;
       color: $header-text-color;
+      white-space: nowrap;
+
+      @include from-screen-size(lg) {
+        padding: 20px 17px;
+      }
 
       &:hover {
         color: $primary;
