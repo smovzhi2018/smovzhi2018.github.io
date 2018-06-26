@@ -1,0 +1,51 @@
+.section-instagram {
+  overflow: hidden;
+
+  .column {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.tag {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 1.5;
+  font-family: $font-neucha;
+  transition: .2s;
+
+  @include from-screen-size(md) {
+    font-size: 60px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $body-text-color;
+  }
+}
+
+.icon-instagram {
+  position: absolute;
+  z-index: 1;
+  top: -70px;
+  left: 130px;
+  font-size: 430px;
+  opacity: .07;
+
+  @include from-screen-size(md) {
+    left: 185px;
+  }
+}
+
+.instagram {
+  width: 100%;
+  height: 400px;
+  background-color: $medium-gray;
+  margin-top: 30px;
+
+  @include from-screen-size(md) {
+    margin-top: 0;
+  }
+}
