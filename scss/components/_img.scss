@@ -1,12 +1,12 @@
 .img-hover {
   display: block;
   position: relative;
-  cursor: pointer;
+  cursor: default;
   overflow: hidden;
 
   &:hover {
 
-    &:before {
+    &:before, &[data-fancybox]:after {
       opacity: 1;
       visibility: visible;
     }
@@ -26,15 +26,24 @@
     transition: .35s;
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    size: 30px;
-    background: url("../img/picture.svg") no-repeat center;
-    background-size: contain;
+  &[data-fancybox] {
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      size: 60px;
+      margin-top: -30px;
+      margin-left: -30px;
+      background: url("../img/picture.svg") no-repeat center;
+      background-size: contain;
+      opacity: 0;
+      visibility: hidden;
+      transition: .35s;
+    }
   }
 
   > img {

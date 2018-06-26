@@ -1,8 +1,8 @@
 .countdown {
   position: relative;
   padding: 120px 0;
-  background: url("../img/countdown-bg.jpg") no-repeat center;
-  background-size: cover;
+  background: url("../img/countdown-bg.jpg");
+  background-size: 100% auto;
 
   &:after {
     content: '';
