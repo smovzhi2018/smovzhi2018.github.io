@@ -24,6 +24,10 @@
   .container {
     flex-grow: 1;
   }
+
+  + div {
+    background-color: $white;
+  }
 }
 
 .nav-overlay {

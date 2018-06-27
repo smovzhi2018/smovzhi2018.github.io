@@ -7,19 +7,21 @@
   align-items: center;
   text-align: center;
   height: calc(100vh - 90px);
+  min-height: 550px;
   color: $white;
+  background-color: $white;
 }
 
 .header-bg {
   position: absolute 0;
   z-index: 4;
   opacity: .4;
-  background: url("../img/header-bg.jpg") no-repeat center -275px;
-  //background: url("../img/header-bg-2.jpg") no-repeat center;
-  //background: url("../img/header-bg-3.jpg") no-repeat center;
-  //background: url("../img/header-bg-4.jpg") no-repeat center -1150px;
-  //background: url("../img/header-bg-5.jpg") no-repeat center ;
+  background: url("../img/header-bg.jpg") no-repeat center top;
   background-size: cover;
+
+  @include from-screen-size(md) {
+    background-position: center -275px;
+  }
 }
 
 .header-content {
@@ -32,25 +34,37 @@
   border-top: 2px solid $white;
   border-bottom: 2px solid $white;
   padding: 12px 20px;
-  font-size: 40px;
+  font-size: 30px;
+
+  @include from-screen-size(lg) {
+    font-size: 40px;
+  }
 }
 
 .surface-shader {
-  position: absolute 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  min-width: 800px;
+  transform: translateX(-50%);
   z-index: 3;
 }
 
 .save-the-date {
   bottom: -185px;
   z-index: 5;
-  width: 350px;
-  height: 350px;
+  size: 300px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  transition: 1s 2.3s ease-in-out;
   font-family: $font-neucha;
+
+  @include from-screen-size(md) {
+    size: 350px;
+  }
 
   &:before, &:after {
     content: '';
@@ -81,18 +95,27 @@
   h4 {
     position: relative;
     z-index: 2;
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
-    margin: 55px 0 0.2em;
+    margin: 40px 0 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+    @include from-screen-size(md) {
+      font-size: 40px;
+      margin: 55px 0 5px;
+    }
   }
 
   .date {
     position: relative;
     z-index: 2;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+    @include from-screen-size(md) {
+      font-size: 20px;
+    }
   }
 }
 

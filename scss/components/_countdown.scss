@@ -1,8 +1,13 @@
 .countdown {
   position: relative;
   padding: 120px 0;
-  background: url("../img/countdown-bg.jpg");
-  background-size: 100% auto;
+  background: url("../img/countdown-bg.jpg") no-repeat;
+  background-position-x: center !important;
+  background-size: auto 120%;
+
+  @include from-screen-size(md) {
+    background-size: 100% auto;
+  }
 
   &:after {
     content: '';
