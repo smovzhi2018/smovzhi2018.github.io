@@ -3,4 +3,8 @@
   height: 260px;
   display: block;
   object-fit: cover;
+
+  &.position-bottom {
+    object-position: bottom;
+  }
 }
