@@ -1,0 +1,47 @@
+.section-map {
+  position: relative;
+  padding: 120px 0;
+  background: url("../img/wedding-map.jpg") no-repeat;
+  background-position-x: center !important;
+  background-size: auto 120%;
+  color: $white;
+
+  @include from-screen-size(md) {
+    background-size: 100% auto;
+  }
+
+  &:after {
+    content: '';
+    position: absolute 0;
+    z-index: 1;
+    background-color: #666;
+    opacity: .9;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.wedding-map-button {
+  display: inline-block;
+  vertical-align: top;
+  background-color: $primary;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $white;
+  padding: 0 30px;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: all .3s;
+
+  &:hover {
+    background-color: darken($primary, 5);
+    text-decoration: none;
+  }
+}
