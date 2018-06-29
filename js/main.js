@@ -25,6 +25,12 @@ $(document).ready(function() {
                     + '<div class="box"><div>%M</div> <span>Mins</span> </div>'
                     + '<div class="box"><div>%S</div> <span>Secs</span> </div>'));
             });
+        },
+
+        loader: function () {
+            $(window).on('load', function () {
+                $('.loader').fadeOut();
+            });
         }
     };
 
@@ -116,6 +122,7 @@ $(document).ready(function() {
     Initialize.wow();
     Initialize.parallax();
     Initialize.countdown();
+    Initialize.loader();
 
     Togglers.nav();
 
