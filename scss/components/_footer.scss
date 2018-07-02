@@ -1,0 +1,23 @@
+.footer {
+  position: relative;
+  padding: 120px 0;
+  background: url("../img/footer-bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  @include from-screen-size(lg) {
+    background-position: center -140px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute 0;
+    z-index: 1;
+    background-color: $primary;
+    opacity: .5;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
