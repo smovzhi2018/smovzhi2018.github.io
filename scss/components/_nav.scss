@@ -86,7 +86,7 @@
 .nav-menu {
   position: fixed;
   z-index: 100;
-  top: 60px;
+  top: 0;
   left: 0;
   bottom: 0;
   width: 50%;
@@ -98,6 +98,10 @@
 
   .nav.active & {
     transform: translateX(0);
+  }
+
+  .scroll-to-fixed-fixed & {
+    top: 60px;
   }
 
   @include from-screen-size(lg) {
