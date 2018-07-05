@@ -1,12 +1,21 @@
 .main {
+  position: relative;
   display: flex;
-  background: url("../img/wedding-card-bg.png") no-repeat center;
-  background-size: auto 100%;
+  background: url("../img/sackcloth-texture-bg-3.jpg") no-repeat center bottom;
+  background-size: auto 120%;
   min-height: 100vh;
   padding: 20px;
   line-height: 1.6;
 
   @include from-screen-size(md) {
     padding: 50px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute 0;
+    z-index: 1;
+    background: url("../img/wedding-card-bg.png") no-repeat center;
+    background-size: auto 100%;
   }
 }
