@@ -5,8 +5,10 @@
   "scripts": {
     "build:dev": "webpack --env.NODE_ENV=dev",
     "build:prod": "webpack --env.NODE_ENV=prod",
+    "build:cards": "webpack --config webpack.wedding-invitations.config.js",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --port 7070 --host 0.0.0.0 --config webpack.config.js --env.NODE_ENV=dev --hot --watch --debug --color --devtool eval-source-map --output-pathinfo --inline --progress --content-base ./dist --history-api-fallback"
+    "start": "webpack-dev-server --port 7070 --host 0.0.0.0 --config webpack.config.js --env.NODE_ENV=dev --hot --watch --debug --color --devtool eval-source-map --output-pathinfo --inline --progress --content-base ./dist --history-api-fallback",
+    "start:card": "webpack-dev-server --port 7080 --host 0.0.0.0 --config webpack.wedding-invitations.config.js --env.NODE_ENV=dev --hot --watch --debug --color --devtool eval-source-map --output-pathinfo --inline --progress --content-base ./dist/wedding-invitation --history-api-fallback"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",

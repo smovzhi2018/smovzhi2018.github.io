@@ -1,0 +1,18 @@
+.card {
+  position: relative;
+  margin: auto;
+  width: 500px;
+  max-width: 100%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 1px 0 15px rgba(0, 0, 0, .15);
+  font-size: 20px;
+  color: #333;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute 10px;
+    border: 2px solid $dark-gray;
+  }
+}
