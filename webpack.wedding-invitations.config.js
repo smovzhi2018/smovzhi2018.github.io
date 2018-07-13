@@ -80,9 +80,9 @@ let config = {
     }
 };
 
-weddingInvitations.map((weddingInvitation) => {
+weddingInvitations.map((weddingInvitation, index) => {
     config.plugins.push(new HtmlWebpackPlugin({
-        filename: __dirname + '/wedding-invitations/' + weddingInvitation.folder + '/index.html',
+        filename: __dirname + '/wedding-invitations/' + (index + 1) + '/index.html',
         template: __dirname + '/wedding-invitation.html',
         templateParameters: {
             'persons': weddingInvitation.persons

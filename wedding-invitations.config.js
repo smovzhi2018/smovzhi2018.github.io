@@ -1,3 +1,3 @@
 module.exports = [
-    {folder: 'popovy', persons: ['Кирилл', 'Даша']}
+    {persons: ['Кирилл', 'Даша']}
 ];
