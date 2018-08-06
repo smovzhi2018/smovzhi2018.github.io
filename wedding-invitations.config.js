@@ -12,5 +12,7 @@ module.exports = [
     {persons: ['Саша', 'Ира']},
     {persons: ['Таня']},
     {persons: ['Алена']},
-    {persons: ['Денис']}
+    {persons: ['Денис']},
+    {persons: ['Ваня', 'Настя']},
+    {persons: ['Рома']}
 ];
